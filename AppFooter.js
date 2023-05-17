@@ -1,10 +1,11 @@
+import React from 'react';
 import { StyleSheet, Text, View } from "react-native";
 
-export default function AppFooter() {
+export default function AppFooter({footer,text}) {
     return (
         <View style={styles.container}>
-            <Text sylte={styles.footer}>Copyright: Baham by project Dareecha (2023) - 
-                <Text style={{fontStyle: 'italic'}}>Karachi Insitute of Economics & Technology</Text>
+            <Text sylte={styles.footer}>{footer} 
+                <Text style={styles.text}>{text}</Text>
             </Text>
         </View>
     );
@@ -17,5 +18,8 @@ const styles = StyleSheet.create({
     },
     footer: {
         textAlign: 'auto',
-    }
+    },
+    text: {
+        fontStyle: 'italic',
+    },
 });
